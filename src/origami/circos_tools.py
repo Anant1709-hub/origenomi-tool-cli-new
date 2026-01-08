@@ -55,9 +55,6 @@ def read_positions(report):
     return dnaA, oriC_list
 
 
-# ============================================================
-# 1) NON-ROTATED CIRCOS PLOT  →  plot_circos()
-# ============================================================
 
 def plot_circos(fna_path, report_path, out_dir):
     """
@@ -67,7 +64,7 @@ def plot_circos(fna_path, report_path, out_dir):
     record = next(SeqIO.parse(fna_path, "fasta"))
     seq = str(record.seq)
     genome_len = len(seq)
-    print(f"Genome Length in non rotated circos:{genome_len}")
+    # print(f"Genome Length in non rotated circos:{genome_len}")
     dnaA, oriCs = read_positions(report_path)
     oriC = oriCs[0][0] if oriCs else None
 
@@ -161,9 +158,6 @@ def plot_circos(fna_path, report_path, out_dir):
     return png  # main.py expects a PNG path
 
 
-# ============================================================
-# 2) ROTATED CIRCOS PLOT  →  plot_rotated_circos()
-# ============================================================
 
 def plot_rotated_circos(fna_path, report_path, out_dir):
     """
@@ -173,7 +167,7 @@ def plot_rotated_circos(fna_path, report_path, out_dir):
     record = next(SeqIO.parse(fna_path, "fasta"))
     seq = str(record.seq)
     genome_len = len(seq)
-    print(f"Genome Length in rotated circos:{genome_len}")
+    # print(f"Genome Length in rotated circos:{genome_len}")
     dnaA, oriC_list = read_positions(report_path)
     oriC = oriC_list[0][0] if oriC_list else None
 

@@ -121,18 +121,18 @@ def generate_all_plots(fasta_output_path, report_path, rotated_fasta_path, work_
     # 1. Parse report to get per-sequence results
     report_info = parse_report(report_path)
 
-    print("[LOG] Parsed report results:")
-    for seq_id, data in report_info.items():
-        print("  ", seq_id, data)
+    # print("[LOG] Parsed report results:")
+    # for seq_id, data in report_info.items():
+    #     print("  ", seq_id, data)
 
     # 2. Loop over sequences
     for seq_id, data in report_info.items():
 
         if not (data["dnaA_found"] and data["oriC_found"]):
-            print(f"[LOG] {seq_id}: dnaA or oriC missing — skipping plots")
+            # print(f"[LOG] {seq_id}: dnaA or oriC missing — skipping plots")
             continue
 
-        print(f"[LOG] {seq_id}: Generating plots")
+        # print(f"[LOG] {seq_id}: Generating plots")
 
         orig_plot = plot_circos(gcf_fasta_path, report_path,out_dir=work_dir)
         shutil.copy(orig_plot, os.path.join(plot_dir, f"{seq_id}_original_circos.png"))
@@ -161,4 +161,4 @@ def generate_all_plots(fasta_output_path, report_path, rotated_fasta_path, work_
         if synteny_png:
             shutil.copy(synteny_png, os.path.join(plot_dir, f"{seq_id}_linear_synteny.png"))
 
-    print("[LOG] All multi-sequence plot generation complete.")
+    # print("[LOG] All multi-sequence plot generation complete.")

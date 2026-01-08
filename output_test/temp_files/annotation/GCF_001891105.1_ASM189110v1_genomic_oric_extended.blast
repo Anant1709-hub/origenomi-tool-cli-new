@@ -1,6 +1,6 @@
 # BLASTN 2.12.0+
 # Query: NZ_CP015115.1 Ralstonia pseudosolanacearum strain EP1 chromosome, complete genome
-# Database: /home/anant/SharmaG_lab/clustered_DB/OriC_clustered100_DB
+# Database: /home/anant/SharmaG_lab/src/origami/data/clustered_DB/OriC_clustered100_DB
 # Fields: query id, subject id, q. start, q. end, s. start, s. end, query length, subject length, % identity, evalue, bit score, mismatches, gaps, alignment length
 # 253 hits found
 NZ_CP015115.1	ORI97024170	3949326	3951070	1745	1	3953527	1745	100.000	0.0	3223	0	0	1745
@@ -258,7 +258,7 @@ NZ_CP015115.1	ORI94010891	3949053	3949117	249	313	3953527	563	84.615	1.66e-06	65
 NZ_CP015115.1	ORI92510408	3949053	3949117	504	568	3953527	818	84.615	1.66e-06	65.8	10	0	65
 # BLASTN 2.12.0+
 # Query: NZ_CP015116.1 Ralstonia pseudosolanacearum strain EP1 plasmid unnamed, complete sequence
-# Database: /home/anant/SharmaG_lab/clustered_DB/OriC_clustered100_DB
+# Database: /home/anant/SharmaG_lab/src/origami/data/clustered_DB/OriC_clustered100_DB
 # Fields: query id, subject id, q. start, q. end, s. start, s. end, query length, subject length, % identity, evalue, bit score, mismatches, gaps, alignment length
 # 6 hits found
 NZ_CP015116.1	ORI97019746	1375612	1376907	2115	816	2093441	2189	78.820	0.0	846	232	48	1322

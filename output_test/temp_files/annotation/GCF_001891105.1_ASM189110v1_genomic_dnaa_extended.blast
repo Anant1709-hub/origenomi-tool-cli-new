@@ -1,6 +1,6 @@
 # BLASTN 2.12.0+
 # Query: NZ_CP015115.1 Ralstonia pseudosolanacearum strain EP1 chromosome, complete genome
-# Database: /home/anant/SharmaG_lab/clustered_DB/dnaA_clustered100_DB
+# Database: /home/anant/SharmaG_lab/src/origami/data/clustered_DB/dnaA_clustered100_DB
 # Fields: query id, subject id, q. start, q. end, s. start, s. end, query length, subject length, % identity, evalue, bit score, mismatches, gaps, alignment length
 # 1205 hits found
 NZ_CP015115.1	dnaA_11118	3949225	3950793	1	1569	3953527	1569	100.000	0.0	2898	0	0	1569
@@ -1210,6 +1210,6 @@ NZ_CP015115.1	dnaA_00770	267	1262	417	1412	3953527	1416	84.048	0.0	953	146	14	10
 NZ_CP015115.1	dnaA_00770	3949794	3950789	417	1412	3953527	1416	84.048	0.0	953	146	14	1003
 # BLASTN 2.12.0+
 # Query: NZ_CP015116.1 Ralstonia pseudosolanacearum strain EP1 plasmid unnamed, complete sequence
-# Database: /home/anant/SharmaG_lab/clustered_DB/dnaA_clustered100_DB
+# Database: /home/anant/SharmaG_lab/src/origami/data/clustered_DB/dnaA_clustered100_DB
 # 0 hits found
 # BLAST processed 2 queries

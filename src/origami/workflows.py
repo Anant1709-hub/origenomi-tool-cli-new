@@ -123,14 +123,11 @@ def ensure_input_in_outdir(input_fasta, out_dir, logger=None):
     if input_fasta != dest_path:
         if not os.path.exists(dest_path):
             msg = f"[LOG] Copying input FASTA to output directory: {dest_path}"
-            print(msg)
-            if logger:
-                logger.info(msg)
+            # print(msg)
+            # if logger:
+            #     logger.info(msg)
 
             shutil.copy2(input_fasta, dest_path)
-        else:
-            print(f"[LOG] Input FASTA already exists in output dir: {dest_path}")
-
         return dest_path
 
     return input_fasta
@@ -143,6 +140,7 @@ def cleanup_unwanted_outputs(out_dir, logger=None):
         "origami_*_genomic_rotated_circular_gcskew.*",
         "coords.txt",
         "dotplot_output.delta",
+        "*genomic_rotated_circular_gcskew.*"
     ]
 
     dir_patterns = [
@@ -155,9 +153,9 @@ def cleanup_unwanted_outputs(out_dir, logger=None):
             if os.path.isfile(fpath):
                 os.remove(fpath)
                 msg = f"[LOG] Removed file: {fpath}"
-                print(msg)
-                if logger:
-                    logger.info(msg)
+                # print(msg)
+                # if logger:
+                #     logger.info(msg)
 
     # Remove matching directories
     for pattern in dir_patterns:
@@ -165,9 +163,9 @@ def cleanup_unwanted_outputs(out_dir, logger=None):
             if os.path.isdir(dpath):
                 shutil.rmtree(dpath)
                 msg = f"[LOG] Removed directory: {dpath}"
-                print(msg)
-                if logger:
-                    logger.info(msg)
+                # print(msg)
+                # if logger:
+                #     logger.info(msg)
 
 
 def run_full(args, logger=None):
@@ -269,7 +267,7 @@ def run_full(args, logger=None):
         oric_coords = chosen.get("oriC_coords_adj")
 
         if not dnaa_coords and not oric_coords:
-            print(f"[WARN] No dnaA or oriC found for {header}, skipping rotation.")
+            # print(f"[WARN] No dnaA or oriC found for {header}, skipping rotation.")
             continue
 
         dnaa_start, dnaa_end = dnaa_coords if dnaa_coords else (None, None)
@@ -310,7 +308,7 @@ def run_full(args, logger=None):
         # ---- Perform rotation ----
         rotated = rotate_sequence(seq_adjusted, start_coord - 1)
         rotated_records.append((header, rotated))
-        print(f"Rotated {header} using minimal-distance anchor: {chosen_feature} at {start_coord}")
+        # print(f"Rotated {header} using minimal-distance anchor: {chosen_feature} at {start_coord}")
 
         write_oric_record_block(paths.report, header, top_dnaa, top_oric, pairs, chosen)
 
@@ -322,7 +320,7 @@ def run_full(args, logger=None):
         append_fasta_record(paths.final_fasta, header, seq)
     
     if args.keep_plot:
-        print("[LOG] --keep-plot enabled → generating multi-sequence plots...")
+        # print("[LOG] --keep-plot enabled → generating multi-sequence plots...")
         generate_all_plots(
             fasta_output_path=paths.original_fasta,
             report_path=paths.original_report,
@@ -330,8 +328,6 @@ def run_full(args, logger=None):
             work_dir=args.out_dir,
             gcf_fasta_path=args.input
         )
-    else:
-        print("[LOG] --keep-plot NOT enabled → skipping plot generation.")
 
     gp.finish()
 

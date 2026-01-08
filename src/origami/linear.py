@@ -8,7 +8,7 @@ import subprocess
 def run_linear_synteny_plot(work_dir):
 
     # FIND THE TWO INPUT FILES
-    print(f"Work Directory in the linear.py:{work_dir}")
+    # print(f"Work Directory in the linear.py:{work_dir}")
     temp_work_dir = os.path.dirname(work_dir)
     fna_files = sorted(glob.glob(os.path.join(temp_work_dir, "*.fna")))
 
@@ -17,16 +17,16 @@ def run_linear_synteny_plot(work_dir):
 
             if os.path.basename(f).startswith("GCF"):
                 original_fna = f
-            elif "origami" in f and "original" not in f:
+            elif "origenomi" in f and "original" not in f:
                 rotated_fna = f
 
     if not original_fna or not rotated_fna:
-        print("[ERROR] Could not find required origami FASTA files.")
-        print("Found:", fna_files)
+        # print("[ERROR] Could not find required origami FASTA files.")
+        # print("Found:", fna_files)
         return None
 
-    print("[INFO] Using ORIGINAL :", original_fna)
-    print("[INFO] Using ROTATED  :", rotated_fna)
+    # print("[INFO] Using ORIGINAL :", original_fna)
+    # print("[INFO] Using ROTATED  :", rotated_fna)
 
     # ------------------------------------------------------------
     # 3. COPY TO TEMPORARY NAMES
@@ -54,14 +54,22 @@ def run_linear_synteny_plot(work_dir):
         "--block_cmap", "viridis",
         "--curve",
         "--show_scale_xticks",
-        "--reuse"
+        "--reuse",
+        "--quiet"
     ]
+    
+#     subprocess.run(
+#     cmd,
+#     stdout=subprocess.DEVNULL,
+#     stderr=subprocess.DEVNULL,
+#     check=True
+#    )
 
-    print("\n[INFO] Running PMAUVE:", " ".join(cmd))
+    # print("\n[INFO] Running PMAUVE:", " ".join(cmd))
     try:
         subprocess.run(cmd, check=True)
     except Exception as e:
-        print("[ERROR] pgv-pmauve failed:", e)
+        # print("[ERROR] pgv-pmauve failed:", e)
         return None
 
     # ------------------------------------------------------------
@@ -72,8 +80,8 @@ def run_linear_synteny_plot(work_dir):
 
     if os.path.exists(src):
         shutil.copy(src, dst)
-        print("Synteny plot saved as:", dst)
+        # print("Synteny plot saved as:", dst)
         return dst
 
-    print("result.png missing — pgv-pmauve failed")
+    # print("result.png missing — pgv-pmauve failed")
     return None

@@ -77,6 +77,8 @@ def run_nucmer(original_fna, rotated_fna, work_dir):
 
     subprocess.run(
         ["nucmer", "--mum", "-g", "1000", "-p", prefix, original_fna, rotated_fna],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
         check=True
     )
 
