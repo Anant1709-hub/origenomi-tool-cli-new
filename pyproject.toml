@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "origenomi"
+version = "0.1.0"
+description = "Trim circular overlaps, find dnaA/oriC, rotate sequences, and report."
+authors = [{ name = "You" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "biopython>=1.83",
+  "numpy>=1.26",
+  "matplotlib>=3.7"
+  ]
+
+[project.scripts]
+origenomi = "origami.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["origami"]
+
+[tool.setuptools.package-data]
+origami = [
+  "database/**/"
+]
+

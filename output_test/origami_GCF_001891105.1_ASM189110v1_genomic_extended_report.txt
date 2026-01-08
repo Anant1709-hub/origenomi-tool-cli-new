@@ -1,0 +1,16 @@
+>>NZ_CP015115.1 Ralstonia pseudosolanacearum strain EP1 chromosome, complete genome
+Chosen dnaA:
+  ID: dnaA_11118
+  Coords: 3949225 - 3950793
+  Score: NA
+  E-value: NA
+Chosen oriC:
+  ID: ORI97029368
+  Coords: 3948603 - 3949224
+  Score: NA
+  E-value: NA
+
+>>NZ_CP015116.1 Ralstonia pseudosolanacearum strain EP1 plasmid unnamed, complete sequence
+No dnaA found
+No oriC found
+

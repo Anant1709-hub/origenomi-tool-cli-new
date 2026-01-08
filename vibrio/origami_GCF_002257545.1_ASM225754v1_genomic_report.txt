@@ -1,0 +1,46 @@
+Trim Analysis
+>NZ_CP022741.1 Vibrio qinghaiensis strain Q67 chromosome 1, complete sequence
+Trim: no terminal overlap
+
+>NZ_CP022742.1 Vibrio qinghaiensis strain Q67 chromosome 2, complete sequence
+Trim: trimmed 20279 bp from front
+
+OriC Analysis
+>NZ_CP022741.1 Vibrio qinghaiensis strain Q67 chromosome 1, complete sequence
+Top dnaA hits (up to 3):
+lcl|NZ 1000…2403
+lcl|NC 1000…2403
+Top oriC hits (up to 7):
+GCF_002257545.1__ORI97015839 2866372…2866852
+GCF_013048635.1__ORI97097844 2866372…2866852
+GCF_000287075.2__ORI97171298 2866372…2866852
+GCF_013048805.1__ORI97131068 2866372…2866852
+GCF_013048775.1__ORI97116215 2866372…2866852
+GCF_002241275.1__ORI97077336 2866372…2866852
+GCF_013048585.1__ORI97036126 2866372…2866852
+
+dnaA - OriC pairs:
+{'lcl|NZ': (1000, 2403), 'GCF_002257545.1__ORI97015839': (2866372, 2866852), 'AT%': 63.8, 'GC%': 36.2}
+{'lcl|NC': (1000, 2403), 'GCF_002257545.1__ORI97015839': (2866372, 2866852), 'AT%': 63.8, 'GC%': 36.2}
+
+Chosen dnaA: lcl|NZ 1000…2403
+Chosen oriC: GCF_002257545.1__ORI97015839 2866372…2866852
+AT%: 63.8
+GC%: 36.2
+Reason: highest AT/GC ratio
+
+>NZ_CP022742.1 Vibrio qinghaiensis strain Q67 chromosome 2, complete sequence
+Top dnaA hits (up to 3):
+Top oriC hits (up to 7):
+NC_015637.1__ORI94030385 62…812
+NC_016628.1__ORI95040354 1138…1286
+NC_004605.1__ORI10030035 1135…1284
+NC_011744.1__ORI92740168 931…1284
+
+dnaA - OriC pairs:
+(none)
+Chosen oriC: NC_015637.1__ORI94030385 62…812
+AT%: 64.6
+GC%: 35.4
+Reason: highest AT/GC ratio
+

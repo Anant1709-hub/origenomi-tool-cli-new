@@ -1,0 +1,33 @@
+Trim Analysis
+>NZ_CP015115.1 Ralstonia pseudosolanacearum strain EP1 chromosome, complete genome
+Trim: no terminal overlap
+
+>NZ_CP015116.1 Ralstonia pseudosolanacearum strain EP1 plasmid unnamed, complete sequence
+Trim: no terminal overlap
+
+OriC Analysis
+>NZ_CP015115.1 Ralstonia pseudosolanacearum strain EP1 chromosome, complete genome
+Top dnaA hits (up to 3):
+dnaA_11118 3949225…3950793
+dnaA_11118 1…1266
+dnaA_21910 1…1255
+Top oriC hits (up to 7):
+ORI97024170 3949326…3951070
+ORI97024170 1…1543
+ORI97024994 3948603…3949764
+ORI97029368 3948603…3949224
+ORI97024994 1…237
+ORI97017326 3949088…3949224
+ORI97158902 3948603…3949224
+
+dnaA - OriC pairs:
+{'dnaA_11118': (3949225, 3950793), 'ORI97029368': (3948603, 3949224), 'AT%': 36.7, 'GC%': 63.3}
+{'dnaA_11118': (1, 1266), 'ORI97024170': (3949326, 3951070), 'AT%': 34.9, 'GC%': 65.1}
+{'dnaA_21910': (1, 1255), 'ORI97024170': (3949326, 3951070), 'AT%': 34.9, 'GC%': 65.1}
+
+Chosen dnaA: dnaA_11118 3949225…3950793
+Chosen oriC: ORI97029368 3948603…3949224
+AT%: 36.7
+GC%: 63.3
+Reason: highest AT/GC ratio
+
