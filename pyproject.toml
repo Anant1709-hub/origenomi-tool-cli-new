@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "origenomi"
-version = "0.1.2"
+version = "0.1.3"
 description = "Trim circular overlaps, find dnaA/oriC, rotate sequences, and report."
 authors = [{ name = "You" }]
 readme = "README.md"
@@ -24,6 +24,6 @@ packages = ["origami"]
 
 [tool.setuptools.package-data]
 origami = [
-  "database/**/"
+  "data/**/"
 ]
 
